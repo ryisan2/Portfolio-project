@@ -234,19 +234,16 @@ column-reverse arranges flex items vertically in the opposite orde
 }
 
 .about-me_picture--mask {
-  width: 100%;
-  width: 100px;
-
+  width: 100px; /* Adjusted: Removed duplicate width property */
   height: 100px;
-
-  border-radius: 50%; /* Make the image round */
-
-  overflow: hidden; /* Hide any "spillover" of the image*/
-
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16); /* Light shadow behind the image*/
-
-  margin-bottom: 28px; /*This will create a space between the image and the text below it*/
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+  margin-bottom: 28px;
+  animation: anime 800ms ease-out backwards; /* Corrected: Removed the 1s delay for simplicity */
 }
+
+
 
 .intrograph {
   text-align: center;
@@ -259,10 +256,10 @@ column-reverse arranges flex items vertically in the opposite orde
 
 .photobomb {
   /*
-My image was too big , let's make it smaller this photobomb area was made 
-just to control the profile image at the top
-*/
-
+  My image was too big , let's make it smaller this photobomb area was made 
+  just to control the profile image at the top
+  */
+  
   width: 100%;
   height: 100px;
   transform: scale(1); /* this transform is used to zoom in the picture a bit*/
@@ -522,6 +519,7 @@ the image when it blurs, below is how we did this --------------------------- */
   position: relative;
 }
 
+
 /*---^^^^^^^^^^^^^TO MAKE THE LITTLE "TOP" APPEAR WHEN YOU PUT YOUR MOUSE OVER THE LOGO AT THE BOTTOM-------- */
 
 /*---------------------- THE FUNKY FOOTER LINE FOR WHEN YOU MOUSE GOES OVER THE WORD -----------------*/
@@ -560,42 +558,109 @@ the image when it blurs, below is how we did this --------------------------- */
 
 /*-------------------NOW LET'S MAKE THINGS WORK BETTER FOR A CELLPHONE /TABLET -------------------------------*/
 
-@media (max-width: 768px;) {
-  nav {
-    height: 68px;
+/* Adjustments for tablets */
+
+@media (max-width: 768px) {
+  
+  .language, .projecta {
+    width: 100%;
+    margin: 10px 0;
   }
+  .codeimg {
+    height: auto; /* Adjust image height to maintain aspect ratio */
+  }
+  .projinfo {
+    display: flex;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .navy__anchor {
+    flex-direction: column;
+  }
+  .footer__logo--popper {
+    right: 0%;
+    transform: translate(50%, 0);
+  }
+
+  nav {
+    padding: 0 12px;
+    height:68px;
+  }
+
   h1 {
+
     font-size: 28px;
   }
 
-  .infograph {
-    text-align: justify;
+  .infograph { 
     font-size: 18px;
   }
-  .language {
-    width: calc(100% / 3);
-  }
-
-  .proj__paragraph {
-    font-size: 12px;
-  }
-
-  .proj__title {
-    font-size: 14px;
-  }
-}
-
-/* Small phones*/
-
-@media (max-width: 480px;) {
-  .depot:not(:last-child) {
-    display: none;
-  }
-.proj__paragraph {
-  display: none;
-}
 
   
 }
 
+/* Adjustments for mobile phones */
+@media (max-width: 480px) {
+  .depot:not(:last-child) {
+    display: none;
+  }
+  .project__img, .logoa {
+    height: auto; /* Ensure images scale properly */
+  }
+  .language__img {
+    display: flex;
+    flex-direction: column;
+    max-width: (100%/2);
+    height: 150px; /* Adjust tech stack icons for smaller screens */
+  }
+  
+  .proj__paragraph {
+
+    display: none;
+  }
+
+  .proj__subtitle {
+
+    display: none;
+  }
+ 
+.projinfo_links {
+
+  font-size: 32px;
+}
 /*-------------------NOW LET'S MAKE THINGS WORK BETTER FOR A CELLPHONE -------------------------------*/
+
+
+
+
+
+/*---------------------------------------IT'S ANIMATION TIME!!!!!!!-------------------------------*/
+
+
+
+
+
+
+@keyframes anime {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.about-me_picture--mask {
+  animation: anime 800ms ease-out backwards;
+}
+
+
+
+
+
+
+/*---------------------------------------IT'S ANIMATION TIME!!!!!!!-------------------------------*/
