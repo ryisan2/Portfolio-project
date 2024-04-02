@@ -497,6 +497,7 @@ the image when it blurs, below is how we did this --------------------------- */
   padding-left: 30px;
 }
 
+
 /*-------------TO MAKE THE LITTLE "TOP" APPEAR WHEN YOU PUT YOUR MOUSE OVER THE LOGO AT THE BOTTOM-------- */
 
 .footer__logo--popper {
@@ -590,6 +591,11 @@ the image when it blurs, below is how we did this --------------------------- */
   .depot:not(:last-child) {
     display: none;
   }
+.proj__paragraph {
+  display: none;
+}
+
+  
 }
 
 /*-------------------NOW LET'S MAKE THINGS WORK BETTER FOR A CELLPHONE -------------------------------*/
