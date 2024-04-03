@@ -246,7 +246,7 @@ column-reverse arranges flex items vertically in the opposite orde
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
   margin-bottom: 28px;
-
+}
 
 
 .intrograph {
@@ -600,9 +600,9 @@ the image when it blurs, below is how we did this --------------------------- */
   .infograph { 
     font-size: 18px;
   }
-
-  
 }
+  
+
 
 /* Adjustments for mobile phones */
 @media (max-width: 480px) {
@@ -632,6 +632,7 @@ the image when it blurs, below is how we did this --------------------------- */
 .projinfo_links {
 
   font-size: 32px;
+}
 }
 /*-------------------NOW LET'S MAKE THINGS WORK BETTER FOR A CELLPHONE -------------------------------*/
 
