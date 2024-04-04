@@ -233,10 +233,6 @@ column-reverse arranges flex items vertically in the opposite orde
   text-align: center;
 }
 
-.about-me__info-container{
-
-  
-}
 
 .about-me_picture--mask {
   width: 100px; /* Adjusted: Removed duplicate width property */
@@ -256,6 +252,8 @@ column-reverse arranges flex items vertically in the opposite orde
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 15px;
+  animation: fade-up 2000ms ease-out backwards;
+
 }
 
 .photobomb {
@@ -280,13 +278,27 @@ column-reverse arranges flex items vertically in the opposite orde
   font-size: 20px;
   text-decoration: none;
   padding: 16px 16px;
+
+}
+
+.about__me-links{
+
+  animation: fade-up 400ms ease-out backwards;
+
 }
 
 .about__me-link:hover {
   color: aqua;
 }
 
-/*--------------IMAGE-----------------*/
+.about-me__info--title
+ {
+
+  animation: fade-up 400ms ease-out backwards;
+
+}
+
+/*--------------IMAGE IN THE MIDDLE-----------------*/
 
 .udraw {
   flex: 1;
@@ -302,7 +314,52 @@ column-reverse arranges flex items vertically in the opposite orde
   height: 800px;
 }
 
-/*---------------------LANGUAGE ICONS/ TECH STACK------------------*/
+/*---------------------------------------IT'S ANIMATION TIME!!!!!!!-------------------------------*/
+
+
+
+
+/*  This goes for the photo in the about section , this will make it pop up */
+
+@keyframes anime {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.about-me_picture--mask {
+  animation: anime 800ms ease-out backwards;
+}
+
+
+/* This will be for the rest of the items in about to fade-up*/
+
+@keyframes fade-up {
+  
+0%{
+opacity: 0;
+transform: translateY(40px);
+}
+100%{
+opacity: 1;
+transform: translateY(0);
+}
+
+}
+
+
+
+/*--------------------------------------- OK BOIS AND GYRLS IT'S ANIMATION TIME DONE !!!!!!!-------------------------------*/
+
+
+
+/*------------------------------------------LANGUAGE ICONS/ TECH STACK--------------------------------*/
 
 .container {
   max-width: 1200px; /* Adjust based on your design */
@@ -640,32 +697,3 @@ the image when it blurs, below is how we did this --------------------------- */
 
 
 
-/*---------------------------------------IT'S ANIMATION TIME!!!!!!!-------------------------------*/
-
-
-
-
-
-
-@keyframes anime {
-  0% {
-    transform: scale(0);
-  }
-  80% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.about-me_picture--mask {
-  animation: anime 800ms ease-out backwards;
-}
-
-
-
-
-
-
-/*--------------------------------------- OK BOIS AND GYRLS IT'S ANIMATION TIME!!!!!!!-------------------------------*/
