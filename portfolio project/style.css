@@ -235,8 +235,7 @@ column-reverse arranges flex items vertically in the opposite orde
 
 .about-me__info-container{
 
-  animation: anime 800ms 1s ease-out backwards; 
-
+  
 }
 
 .about-me_picture--mask {
@@ -246,6 +245,7 @@ column-reverse arranges flex items vertically in the opposite orde
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
   margin-bottom: 28px;
+  animation: anime 800ms 1s ease-out backwards; 
 }
 
 
