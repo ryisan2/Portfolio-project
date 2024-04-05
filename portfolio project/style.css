@@ -137,7 +137,7 @@ nav {
 
   align-items: center;
   /* ^ Centers the navigation menu vertically*/
-  padding: 0 400px;
+  padding: 0 12px;
 }
 /*now let's work on the individual items in the navigation */
 
