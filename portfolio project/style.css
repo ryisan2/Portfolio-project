@@ -78,6 +78,8 @@ a {
   transition: all 300ms ease;
 }
 
+
+
 /*----------------- That Cool Moving line thing that happened when you were moving the mouse over the links , 
 yeah this code above does that --------------------- */
 
@@ -104,7 +106,7 @@ yeah this code above does that --------------------- */
   font-size: 32px;
 }
 
-/*--------- NAVIGAION BAR--------- */
+/*------------------------------------------ NAVIGAION BAR-------------------------------------------- */
 
 /*Let's add a bit of an alternating color aesthetic using CSS*/
 
@@ -116,7 +118,10 @@ section:nth-child(odd) {
 
 /* This will make every other section grey to match an aesthetic, this will
 be a recurring code so every other section will be grey*/
+.navy {
 
+padding: 0 50px;
+}
 nav {
   height: 100px;
   width: 100%;
@@ -132,11 +137,11 @@ nav {
 
   align-items: center;
   /* ^ Centers the navigation menu vertically*/
-  padding: 0 12px;
+  padding: 0 400px;
 }
 /*now let's work on the individual items in the navigation */
 
-/* ---------NAVIGATION LIST-----------*/
+/* --------------------------------------NAVIGATION LIST-------------------------------------*/
 
 li {
   transition: background-color 300ms;
@@ -152,6 +157,7 @@ li {
 
 .nav__link--list {
   display: flex;
+  padding: 10px;
 }
 
 .nav__link--anchor {
@@ -175,6 +181,12 @@ li {
   /* This will make the hover effect smooth*/
 }
 
+.nav__link--anchor-contact:hover{
+  color: rgb(14, 125, 125);
+  opacity: 0.7;
+
+}
+
 .personal_logo {
   color: darkblue;
   font-weight: bolder;
@@ -187,7 +199,7 @@ li {
   display: flex;
 }
 
-/* ---------ABOUT ME-----------*/
+/* ----------------------------------------ABOUT ME--------------------------------------------------*/
 
 #about-me {
   min-height: 100vh;
@@ -202,34 +214,34 @@ li {
 
 .about-me__info-container {
   /* This is for the top part where the image and information about me is */
-
+  
   flex-direction: column;
   /*
-    The flex-direction property in CSS is used to set the direction of the flex container's main axis. It can have one of four values: row, row-reverse, column, or column-reverse.
-
-row is the default value and arranges flex items horizontally.
-row-reverse is similar to row, but arranges flex items in the opposite order.
-column arranges flex items vertically.
-column-reverse arranges flex items vertically in the opposite orde
-    */
-
+  The flex-direction property in CSS is used to set the direction of the flex container's main axis. It can have one of four values: row, row-reverse, column, or column-reverse.
+  
+  row is the default value and arranges flex items horizontally.
+  row-reverse is similar to row, but arranges flex items in the opposite order.
+  column arranges flex items vertically.
+  column-reverse arranges flex items vertically in the opposite orde
+  */
+  
   display: flex;
   /*
-    The CSS property display: flex is the most flexible display property in CSS, 
-    and it allows designers to create flexible layouts with elements that can be 
-    aligned and distributed vertically or horizontally. This property enables the 
-    flexbox layout mode, which allows designers to manipulate elements' alignment, 
-    spacing, and more
-    
-    */
+  The CSS property display: flex is the most flexible display property in CSS, 
+  and it allows designers to create flexible layouts with elements that can be 
+  aligned and distributed vertically or horizontally. This property enables the 
+  flexbox layout mode, which allows designers to manipulate elements' alignment, 
+  spacing, and more
+  
+  */
   justify-content: center;
   align-items: center;
   padding: 20px;
-
+  
   max-width: auto; /* Let's make it so the text is not so wide on the page */
-
+  
   margin: 0 auto;
-
+  
   text-align: center;
 }
 
@@ -252,7 +264,7 @@ column-reverse arranges flex items vertically in the opposite orde
   font-weight: 600;
   font-size: 20px;
   animation: fade-up 1600ms ease-out backwards;
-
+  
 }
 
 .photobomb {
@@ -277,27 +289,31 @@ column-reverse arranges flex items vertically in the opposite orde
   font-size: 20px;
   text-decoration: none;
   padding: 16px 16px;
-
+  transition: opacity 300ms ease;
+  
 }
 
 .about__me-links{
-
+  
   animation: fade-up 1800ms ease-out backwards;
-
 }
 
 .about__me-link:hover {
-  color: aqua;
+  color: rgb(14, 125, 125);
+  opacity: 0.7;
 }
 
 .about-me__info--title
- {
-
+{
+  
   animation: fade-up 1000ms ease-out backwards;
-
+  
 }
+/* ----------------------------------------ABOUT ME--------------------------------------------------*/
 
-/*--------------IMAGE IN THE MIDDLE-----------------*/
+
+
+/*--------------------------------------IMAGE IN THE MIDDLE------------------------------------------*/
 
 .udraw {
   flex: 1;
@@ -306,14 +322,25 @@ column-reverse arranges flex items vertically in the opposite orde
   margin: 0 30px;
   padding: 10px;
   justify-content: center;
-  animation: fade-in 2s ease-out backwards;
-
+  animation: fade-in 2s 0.5s ease-out backwards;
+  
 }
 
 .codeimg {
   width: 100%;
   height: 800px;
 }
+
+.hand {
+  display: inline-block;
+  
+  font-size: 40px;
+  animation: wave 500ms infinite ease-in-out ;
+  
+}
+/*--------------------------------------IMAGE IN THE MIDDLE------------------------------------------*/
+
+
 
 /*---------------------------------------IT'S ANIMATION TIME!!!!!!!-------------------------------*/
 
@@ -371,12 +398,29 @@ opacity: 1;
   }
 }
 
+@keyframes wave {
+
+  0% {
+    transform: rotate()0;
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100%
+  {
+    transform: rotate(0);
+  }
+
+  
+}
+
 
 
 /*--------------------------------------- OK BOIS AND GYRLS IT'S ANIMATION TIME DONE !!!!!!!-------------------------------*/
 
 
 
+/*------------------------------------------LANGUAGE ICONS/ TECH STACK--------------------------------*/
 /*------------------------------------------LANGUAGE ICONS/ TECH STACK--------------------------------*/
 
 .container {
@@ -399,254 +443,273 @@ opacity: 1;
 .language {
   width: calc(
     100% / 3 - 20px
-  ); /* Adjust for 3 items per row, accounting for some margin */
-  margin: 10px; /* Margin around each item */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content vertically */
-  position: relative; /* Needed for absolute positioning of the name */
-}
-
-.language__image--wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 200ms ease, filter 200ms ease; /* Smooth transition for transform and filter */
-}
-
-.language__img {
-  max-width: 100%; /* Ensure the image is responsive and fits its container */
-  height: 200px; /* Maintain aspect ratio */
-  transition: transform 200ms ease, filter 200ms ease; /* Smooth transition for transform and filter */
-}
-
-.language__name {
-  font-size: 32px;
-  margin-top: 20px;
-  bottom: 0;
-  width: 100%; /* Ensure the name spans the width of the image */
-  text-align: center; /* Center the name text */
-  transform: scale(0); /* Initially hide the name */
-  transition: transform 500ms ease; /* Smooth transition for transform */
-  opacity: 0; /* Make the name fully transparent initially */
-}
-
-.language:hover .language__image--wrapper,
-.language:hover .language__img {
-  transform: scale(0.9); /* Make the image smaller on hover */
-  filter: brightness(80%); /* Make the image dimmer on hover */
-}
-
-.language:hover .language__name {
-  transform: scale(1); /* Show the name on hover */
-  opacity: 1; /* Make the name fully visible on hover */
-}
-
-/*----------------------------------PORTFOLIO SECTION---------------------------------------------*/
-
-.project__img {
-  height: 500px;
-  width: 100%;
-  max-width: 700px;
-  transition: all 500ms ease;
-}
-
-.project_wrapper {
-  display: flex;
-  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
-  border-radius: 20px;
-  overflow: hidden; /* This is to make sure that the image is not taking over the border so that the effect will work*/
-  position: relative;
-  margin-bottom: 40px;
-}
-
-/* we need to have the image have an effect where the screen goes black and shows information to do that we need
-a before and after of the original container, our container was .project_wrapper so now we need a before and 
-after of that */
-
-.project_wrapper:before {
-  content: "";
-  position: absolute; /* This makes sure that the position is where is is supposed to be and not taking over*/
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  opacity: 0;
-  transition: opacity 450ms ease;
-  z-index: 2px;
-}
-
-.projecta:hover .project_wrapper:before {
-  opacity: 0.7;
-}
-
-.projecta.intrograph .project__img {
-  transform: scale(1.07);
-  filter: blur(20px);
-}
-
-.projects__list {
-  padding-top: 30px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-/* --------------- We were seeing the info to the right of the portfolio image and remember we are trying to make it go over
-the image when it blurs, below is how we did this --------------------------- */
-
-.projinfo {
-  position: absolute;
-  top: 50%;
-  left: 90px;
-  transform: translateY(100%);
-  max-width: 550px;
-  z-index: 3;
-  opacity: 0; /*TEXT INVISIBLE BEFORE WE CLICK ON IT*/
-  transition: transform 450ms, opacity 300ms; /* EASE OUT THE TRANSITION OF SHOWOING THE TEXT*/
-}
-
-/* TEXT SHOWS UP WHEN YOU HOVER OVER IT */
-
-.projecta:hover .projinfo {
-  transform: translateY(-50%);
-
-  opacity: 1;
-}
-
-.proj__title {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.proj__subtitle {
-  font-size: 20px;
-  margin-top: 25px;
-}
-
-.proj__title,
-.proj__subtitle,
-.proj__paragraph,
-.projinfo_links {
-  text-align: left;
-  color: black;
-  text-decoration: none;
-}
-
-.projinfo_links {
-  display: flex;
-  align-items: center;
-  margin: 10px;
-}
-
-/*-----------------------NOW FOR THE FOOTER ----------------------------*/
-
-.footera {
-  background-color: black;
-}
-
-.logoa {
-  height: 400px;
-  width: 100%;
-  max-width: 400px;
-}
-
-.rowa {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.contacts {
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  justify-content: space-around;
-  background-color: black;
-}
-
-.copy {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  color: white;
-  padding-left: 30px;
-}
-
-
-/*-------------TO MAKE THE LITTLE "TOP" APPEAR WHEN YOU PUT YOUR MOUSE OVER THE LOGO AT THE BOTTOM-------- */
-
-.footer__logo--popper {
-  font-size: 30px;
-  color: white;
-  position: absolute;
-  right: 0;
-  top: 30px;
-  font-weight: 700;
-  opacity: 0;
-  transition: all 400ms ease;
-}
-
-.navy__anchor:hover .footer__logo--popper {
-  transform: translateX(-20px);
-  transform: translateY(120px);
-  opacity: 1;
-  margin-bottom: 20px;
-}
-.navy__anchor {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-
-/*---^^^^^^^^^^^^^TO MAKE THE LITTLE "TOP" APPEAR WHEN YOU PUT YOUR MOUSE OVER THE LOGO AT THE BOTTOM-------- */
-
-/*---------------------- THE FUNKY FOOTER LINE FOR WHEN YOU MOUSE GOES OVER THE WORD -----------------*/
-
-.nav__link2:after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  background-color: white;
-  width: 0;
-  bottom: -3px;
-  right: 0;
-  transition: all 300ms ease;
-}
-
-.nav__link2:hover:after {
-  width: 100%;
-  left: 0;
-}
-
-.nav__link2-white:after {
-  background-color: black;
-}
-.nav__link2-black:after {
-  background-color: white;
-}
-
-.nav__link2 {
-  padding: 5px;
-  border-radius: 50px;
-  background-color: rgb(227, 240, 240) 300ms;
-  transition: all 300ms ease;
-}
-
-/*---------------------- THE FUNKY FOOTER LINE FOR WHEN YOU MOUSE GOES OVER THE WORD -----------------*/
-
-/*-------------------NOW LET'S MAKE THINGS WORK BETTER FOR A CELLPHONE /TABLET -------------------------------*/
-
-/* Adjustments for tablets */
-
-@media (max-width: 768px) {
-  
-  .language, .projecta {
-    width: 100%;
-    margin: 10px 0;
+    ); /* Adjust for 3 items per row, accounting for some margin */
+    margin: 10px; /* Margin around each item */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    position: relative; /* Needed for absolute positioning of the name */
   }
-  .codeimg {
-    height: auto; /* Adjust image height to maintain aspect ratio */
+  
+  .language__image--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 200ms ease, filter 200ms ease; /* Smooth transition for transform and filter */
+  }
+  
+  .language__img {
+    max-width: 100%; /* Ensure the image is responsive and fits its container */
+    height: 200px; /* Maintain aspect ratio */
+    transition: transform 200ms ease, filter 200ms ease; /* Smooth transition for transform and filter */
+  }
+  
+  .language__name {
+    font-size: 32px;
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%; /* Ensure the name spans the width of the image */
+    text-align: center; /* Center the name text */
+    transform: scale(0); /* Initially hide the name */
+    transition: transform 500ms ease; /* Smooth transition for transform */
+    opacity: 0; /* Make the name fully transparent initially */
+  }
+  
+  .language:hover .language__image--wrapper,
+  .language:hover .language__img {
+    transform: scale(0.9); /* Make the image smaller on hover */
+    filter: brightness(80%); /* Make the image dimmer on hover */
+  }
+  
+  .language:hover .language__name {
+    transform: scale(1); /* Show the name on hover */
+    opacity: 1; /* Make the name fully visible on hover */
+  }
+  /*------------------------------------------LANGUAGE ICONS/ TECH STACK--------------------------------*/
+
+  
+
+  /*----------------------------------PORTFOLIO SECTION---------------------------------------------*/
+  
+  .project__img {
+    height: 500px;
+    width: 100%;
+    max-width: 700px;
+    transition: all 500ms ease;
+  }
+  
+  .project_wrapper {
+    display: flex;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+    border-radius: 20px;
+    overflow: hidden; /* This is to make sure that the image is not taking over the border so that the effect will work*/
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  /* we need to have the image have an effect where the screen goes black and shows information to do that we need
+  a before and after of the original container, our container was .project_wrapper so now we need a before and 
+  after of that */
+  
+  .project_wrapper:before {
+    content: "";
+    position: absolute; /* This makes sure that the position is where is is supposed to be and not taking over*/
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 450ms ease;
+    z-index: 2px;
+  }
+  
+  .projecta:hover .project_wrapper:before {
+    opacity: 0.7;
+  }
+  
+  .projecta.intrograph .project__img {
+    transform: scale(1.07);
+    filter: blur(20px);
+  }
+  
+  .projects__list {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  /* --------------- We were seeing the info to the right of the portfolio image and remember we are trying to make it go over
+  the image when it blurs, below is how we did this --------------------------- */
+  
+  .projinfo {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(100%);
+    max-width: 550px;
+    z-index: 3;
+    opacity: 0; /*TEXT INVISIBLE BEFORE WE CLICK ON IT*/
+    transition: transform 450ms, opacity 300ms; /* EASE OUT THE TRANSITION OF SHOWOING THE TEXT*/
+  }
+  
+  /* TEXT SHOWS UP WHEN YOU HOVER OVER IT */
+  
+  .projecta:hover .projinfo {
+    transform: translateY(-50%);
+    
+    opacity: 1;
+  }
+  
+  .proj__title {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .proj__subtitle {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  
+  .proj__title,
+  .proj__subtitle,
+  .proj__paragraph,
+  .projinfo_links {
+    text-align: left;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .projinfo_links {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .projinfo_linka:hover{
+    
+    border: 50%;
+    background-color: rgb(213, 120, 126)
+    ;
+  }
+  /*----------------------------------PORTFOLIO SECTION---------------------------------------------*/
+
+  
+
+  /*---------------------------------------NOW FOR THE FOOTER --------------------------------------*/
+  
+  .footera {
+    background-color: black;
+  }
+  
+  .logoa {
+    height: 400px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .rowa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contacts {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+  }
+  
+  .copy {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-left: 30px;
+  }
+  
+  
+  /*-------------TO MAKE THE LITTLE "TOP" APPEAR WHEN YOU PUT YOUR MOUSE OVER THE LOGO AT THE BOTTOM-------- */
+  
+  .footer__logo--popper {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 400ms ease;
+  }
+  
+  .navy__anchor:hover .footer__logo--popper {
+    transform: translateX(-20px);
+    transform: translateY(120px);
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+  .navy__anchor {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  
+  /*---^^^^^^^^^^^^^TO MAKE THE LITTLE "TOP" APPEAR WHEN YOU PUT YOUR MOUSE OVER THE LOGO AT THE BOTTOM-------- */
+  
+  /*---------------------- THE FUNKY FOOTER LINE FOR WHEN YOU MOUSE GOES OVER THE WORD -----------------*/
+  
+  .nav__link2:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: white;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+  }
+  
+  .nav__link2:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .nav__link2-white:after {
+    background-color: black;
+  }
+  .nav__link2-black:after {
+    background-color: white;
+  }
+  
+  .nav__link2 {
+    padding: 5px;
+    border-radius: 50px;
+    background-color: rgb(227, 240, 240) 300ms;
+    transition: all 300ms ease;
+  }
+  
+  /*---------------------- THE FUNKY FOOTER LINE FOR WHEN YOU MOUSE GOES OVER THE WORD -----------------*/
+ 
+ 
+  /*---------------------------------------END OF THE FOOTER -------------------------------------------*/
+
+  
+
+
+  /*-------------------NOW LET'S MAKE THINGS WORK BETTER FOR A CELLPHONE /TABLET -------------------------------*/
+  
+  /* Adjustments for tablets */
+  
+  @media (max-width: 768px) {
+    
+    .language, .projecta {
+      width: 100%;
+      margin: 10px 0;
+    }
+    .codeimg {
+      height: auto; /* Adjust image height to maintain aspect ratio */
   }
   .projinfo {
     display: flex;
