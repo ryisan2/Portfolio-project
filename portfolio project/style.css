@@ -174,7 +174,7 @@ li {
 
 .nav__link--anchor-contact {
   /*This is going to change the "contact" into a button*/
-  background-color: lightblue;
+  background-color: rgb(123, 201, 228);
   padding: 8px 20px;
   border-radius: 50px;
   transition: all 300ms ease;
