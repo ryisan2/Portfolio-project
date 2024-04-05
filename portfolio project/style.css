@@ -224,7 +224,7 @@ column-reverse arranges flex items vertically in the opposite orde
     */
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
 
   max-width: auto; /* Let's make it so the text is not so wide on the page */
 
@@ -241,7 +241,7 @@ column-reverse arranges flex items vertically in the opposite orde
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
   margin-bottom: 28px;
-  animation: anime 800ms 1s ease-out backwards; 
+  animation: anime 600ms 1s ease-out backwards; 
 }
 
 
@@ -251,8 +251,7 @@ column-reverse arranges flex items vertically in the opposite orde
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  margin-bottom: 15px;
-  animation: fade-up 2000ms ease-out backwards;
+  animation: fade-up 1600ms ease-out backwards;
 
 }
 
@@ -283,7 +282,7 @@ column-reverse arranges flex items vertically in the opposite orde
 
 .about__me-links{
 
-  animation: fade-up 400ms ease-out backwards;
+  animation: fade-up 1800ms ease-out backwards;
 
 }
 
@@ -294,7 +293,7 @@ column-reverse arranges flex items vertically in the opposite orde
 .about-me__info--title
  {
 
-  animation: fade-up 400ms ease-out backwards;
+  animation: fade-up 1000ms ease-out backwards;
 
 }
 
@@ -304,9 +303,11 @@ column-reverse arranges flex items vertically in the opposite orde
   flex: 1;
   display: flex;
   align-items: center;
-  margin: 30px;
+  margin: 0 30px;
   padding: 10px;
   justify-content: center;
+  animation: fade-in 2s ease-out backwards;
+
 }
 
 .codeimg {
@@ -351,6 +352,23 @@ opacity: 1;
 transform: translateY(0);
 }
 
+}
+
+/* Now let's fade in the image udraw*/
+
+@keyframes fade-in {
+
+  0% {
+opacity: 0;
+
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+
+opacity: 1;
+  }
 }
 
 
@@ -632,6 +650,7 @@ the image when it blurs, below is how we did this --------------------------- */
   }
   .projinfo {
     display: flex;
+    justify-content: center;
     left: 20%;
     transform: translate(-50%, -50%);
     text-align: center;
